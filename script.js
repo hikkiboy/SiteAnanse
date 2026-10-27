@@ -1,10 +1,10 @@
 const video = document.getElementById('Logo');
+let indiceAtual = 0;
 
 video.addEventListener('ended', () => {
   video.pause(); 
 });
 
-let indiceAtual = 0;
 
 function mudarSlide(direcao){
     const track = document.getElementById('carouselTrack');
@@ -13,7 +13,7 @@ function mudarSlide(direcao){
 
     indiceAtual += direcao;
 
-    if(indiceAtual){
+    if(indiceAtual < 0){
         indiceAtual = totalSlides - 1;
     }
     else if (indiceAtual >= totalSlides){
@@ -23,7 +23,6 @@ function mudarSlide(direcao){
     const deslocamento = -indiceAtual * 100;
     track.style.transform = `translateX(${deslocamento}%)`
 }
-
 window.addEventListener('pageshow', function(event) {
     var iframe = document.getElementById('myIframe');
     iframe.src = iframe.src; 
