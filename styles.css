@@ -5,9 +5,9 @@ body{
 
 .container {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */
-  height: 100vh;           /* Gives the container height to center within */
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;          
   flex-direction: column;
 }
 .texto{
@@ -25,22 +25,55 @@ body{
      5px  1px 0 rgba(0, 217, 255, 0.8);
 }
 
-/* 1. Define the sequence steps */
 @keyframes fadeInOut {
   0% { opacity: 0; }
   50% { opacity: 1; }
 }
 
-.screen-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;          /* Ensures it stays on top of other elements */
-  pointer-events: none;   /* Allows clicking through the overlay to underlying content */
-  
-  /* Apply your screen effects here */
-  backdrop-filter: blur(4px) brightness(80%); 
-}
+   .carousel-container {
+      position: relative;
+      width: 600px;
+      max-width: 100%;
+      margin: 20px auto;
+      overflow: hidden;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
 
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+      width: 100%;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .carousel-slide iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+    }
+
+    button.btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 4px;
+    }
+
+    button.prev {
+      left: 10px;
+    }
+
+    button.next {
+      right: 10px;
+    }
