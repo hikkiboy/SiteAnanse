@@ -1,6 +1,7 @@
 body{
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(imgs/006op.png);
 }
 
 .container {
@@ -36,8 +37,7 @@ body{
       max-width: 100%;
       margin: 20px auto;
       overflow: hidden;
-      border: 2px solid #ccc;
-      border-radius: 8px;
+      border-radius: 5%;
     }
 
     .carousel-track {
@@ -68,6 +68,7 @@ body{
       cursor: pointer;
       z-index: 10;
       border-radius: 4px;
+      animation: fadeInOut 6s ease-in-out ;
     }
 
     button.prev {
@@ -77,3 +78,62 @@ body{
     button.next {
       right: 10px;
     }
+
+        /* Table container styling */
+        .custom-table {
+            width: 100%;
+            max-width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse; /* Prevents double borders */
+            font-family: sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+             animation: fadeInOut 6s ease-in-out ;
+        }
+
+        /* Styling for both header and data cells */
+        .custom-table th, 
+        .custom-table td {
+            padding: 12px 15px;
+        }
+
+        /* Header specific styles */
+        .custom-table th {
+            background-color: #f4f4f4;
+            color: #333333;
+            font-weight: bold;
+             animation: fadeInOut 6s ease-in-out ;
+   text-shadow: 
+    -5px -1px 0 rgba(255, 71, 87, 0.8), 
+     5px  1px 0 rgba(0, 217, 255, 0.8);
+        }
+
+
+    .textomenor{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.moveup{
+  margin-top: -40px;
+      color: white;
+    font-size: 40px;
+    text-align: center;
+}
+p{
+  line-height: 1.2;
+}
+.icone{
+  border-radius: 50%;
+}
+
+h1{
+  margin-top: -150px;
+               animation: fadeInOut 6s ease-in-out ;
+                  text-shadow: 
+    -3px -1px 0 rgba(255, 71, 87, 0.8), 
+     3px  1px 0 rgba(0, 217, 255, 0.8);
+}
+iframe{
+               animation: fadeInOut 6s ease-in-out ;
+}
